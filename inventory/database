@@ -1,0 +1,51 @@
+CREATE DATABASE store;
+USE store;
+CREATE TABLE user(
+    id int(11) primary key auto_increment,
+    name varchar(50),
+    email varchar(50),
+    password varchar(32),
+    job_type int(2)
+
+);
+CREATE TABLE category(
+    id int(11) primary key auto_increment,
+    name varchar(50)
+);
+CREATE TABLE item(
+    id int(11) primary key auto_increment,
+    title varchar(50),
+    description text,
+    image text,
+    price varchar(50),
+    number int(7),
+    id_category int(11), 
+    id_user int(11),
+    FOREIGN KEY (id_category) REFERENCES category(id),
+    FOREIGN KEY (id_user) REFERENCES user(id)
+);
+CREATE TABLE sales_list(
+    id_item int(11),
+    id_employee int(11),
+    number int(7),
+    total_price int(7),
+    FOREIGN KEY (id_item) REFERENCES item(id),
+    FOREIGN KEY (id_employee) REFERENCES user(id),
+    PRIMARY KEY(id_item,id_employee)
+);
+CREATE TABLE sales_date(
+    id_item int(11),
+    id_employee int(11),
+    quantity int(7),
+    price varchar(50),
+    sale_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP primary key,
+    FOREIGN KEY(id_item) REFERENCES item(id),
+    FOREIGN KEY(id_employee) REFERENCES user(id)
+);
+CREATE TABLE online_user(
+    id_user int(11) ,
+    status varchar(5),
+    login_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_user) REFERENCES user(id),
+    PRIMARY KEY(id_user)
+);

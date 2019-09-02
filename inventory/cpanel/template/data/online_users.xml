@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<document>
+  <user>
+    <id_user>3</id_user>
+    <status>1</status>
+    <ip_address>127.0.0.1</ip_address>
+    <browser_name>Firefox</browser_name>
+    <platform>Win7</platform>
+    <device_name>Windows Desktop</device_name>
+    <device_type>Desktop</device_type>
+  </user>
+  <user>
+    <id_user>7</id_user>
+    <status>1</status>
+    <ip_address>127.0.0.1</ip_address>
+    <browser_name>Firefox</browser_name>
+    <platform>Win7</platform>
+    <device_name>Windows Desktop</device_name>
+    <device_type>Desktop</device_type>
+  </user>
+  <user>
+    <id_user>4</id_user>
+    <status>1</status>
+    <ip_address>::1</ip_address>
+    <browser_name>Chrome</browser_name>
+    <platform>Win7</platform>
+    <device_name>Windows Desktop</device_name>
+    <device_type>Desktop</device_type>
+  </user>
+</document>
